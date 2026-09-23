@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f8dce8;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Calculator Body */
+
+.calculator {
+    width: 300px;
+    padding: 18px;
+
+    background: linear-gradient(
+        145deg,
+        #ed5b91,
+        #c92d68
+    );
+
+    border: 4px solid #a91f54;
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.35),
+        inset 0 0 10px rgba(255,255,255,0.3);
+}
+
+
+/* Top Section */
+
+.top {
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+    font-size: 10px;
+}
+
+.top b {
+    font-size: 12px;
+}
+
+
+/* Solar Panel */
+
+.solar {
+    width: 82px;
+    height: 27px;
+
+    background: #111;
+
+    border-radius: 3px;
+
+    box-shadow:
+        inset 0 0 5px #555;
+}
+
+
+/* Display */
+
+.display {
+    height: 78px;
+
+    margin: 5px 0 15px;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    background: #aeb5a7;
+
+    border: 5px solid #9b2450;
+    border-radius: 10px;
+
+    color: #202820;
+
+    font-size: 38px;
+    font-family: monospace;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 3px 8px rgba(0,0,0,0.4);
+}
+
+
+/* Buttons Grid */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 9px;
+}
+
+
+/* Buttons */
+
+button {
+    height: 39px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        145deg,
+        #fa8fb4,
+        #e34d83
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 0 #a51e52,
+        inset 0 1px 2px rgba(255,255,255,0.5);
+
+    transition: 0.1s;
+}
+
+
+/* Click Effect */
+
+button:active {
+    transform: translateY(3px);
+
+    box-shadow:
+        0 1px 0 #a51e52;
+}
+
+
+/* Plus Button */
+
+.plus {
+    grid-row: span 2;
+    height: 87px;
+}
+
+
+/* Equal Button */
+
+.equal {
+    grid-row: span 2;
+    height: 87px;
+
+    background: linear-gradient(
+        145deg,
+        #f27aa5,
+        #d93670
+    );
+}
+
+
+/* Mobile */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 290px;
+    }
+
+    .display {
+        font-size: 32px;
+    }
+}
