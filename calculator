@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Calculator</title>
+    <style>
+        body {
+            background-color: #fce4ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            background-color: #e91e63;
+            width: 320px;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 4px solid #c2185b;
+        }
+        .branding {
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            padding: 0 4px;
+        }
+        .solar {
+            background: #111;
+            width: 50px;
+            height: 16px;
+            border-radius: 3px;
+            margin-left: auto;
+            margin-bottom: 5px;
+        }
+        .screen {
+            background-color: #b0bec5;
+            height: 55px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 15px;
+            font-size: 26px;
+            font-family: monospace;
+            color: #263238;
+            border: 3px inset #78909c;
+            overflow: hidden;
+        }
+        .keys {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+        button {
+            background-color: #f48fb1;
+            border: none;
+            border-radius: 8px;
+            height: 42px;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 3px 0 #ad1457;
+            transition: all 0.08s;
+        }
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 #ad1457;
+        }
+        button.equals {
+            grid-row: span 2;
+            height: 92px;
+            background-color: #ec407a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="branding">
+            <span>primeLINE</span>
+            <span>12 DIGITS</span>
+        </div>
+        <div class="solar"></div>
+        <div class="screen" id="display">0</div>
+        <div class="keys">
+            <button onclick="clearAll()">AC</button>
+            <button onclick="clearEntry()">C-CE</button>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('*')">×</button>
+            <button onclick="appendValue('/')">÷</button>
+
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('-')">−</button>
+            <button class="equals" onclick="calculateResult()">=</button>
+
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('00')">00</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="appendValue('+')">+</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        let currentInput = '0';
+
+        function updateDisplay() {
+            display.innerText = currentInput.slice(0, 12);
+        }
+
+        function appendValue(val) {
+            if (currentInput === '0' && val !== '.') {
+                currentInput = val;
+            } else {
+                currentInput += val;
+            }
+            updateDisplay();
+        }
+
+        function clearAll() {
+            currentInput = '0';
+            updateDisplay();
+        }
+
+        function clearEntry() {
+            currentInput = '0';
+            updateDisplay();
+        }
+
+        function calculateResult() {
+            try {
+                let sanitized = currentInput.replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-');
+                let result = eval(sanitized);
+                currentInput = String(result);
+                updateDisplay();
+            } catch (e) {
+                currentInput = 'Error';
+                updateDisplay();
+                setTimeout(clearAll, 1000);
+            }
+        }
+    </script>
+</body>
+</html>
