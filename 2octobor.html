@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Icons</title>
+    <style>
+        div {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 60px;
+            padding: 15px;
+            cursor:progress;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .social-icons img:active {
+            opacity: 0.45; /* Percent (%) ki jagah decimal number ka use hota hai */
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>login every where
+            <ol type="1"><li>instagram</li>
+            <li>whatsapp</li>
+            <li>twitter</li>
+            <li>facebook</li>
+            <li>www</li>
+            </ol>
+        </h2>
+        
+    </form>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/?hl=en"><img src="images/instagram.png" title="Instagram" alt="Instagram"></a>
+        <a href="https://web.whatsapp.com/"><img src="images/social.png" title="WhatsApp" alt="WhatsApp"></a>
+        <a href="https://x.com/"><img src="images/twitter.png" title="Twitter" alt="Twitter"></a>
+        <a href="https://www.facebook.com/"><img src="images/facebook.png" title="Facebook" alt="Facebook"></a>
+        <a href="https://en.wikipedia.org/wiki/World_Wide_Web"><img src="images/world-wide-web.png" alt=""></a>
+    </div>
+
+</body>
+</html>

@@ -3,24 +3,33 @@ if 5 > 2 :
    print("sanket legend never lose")
 print("I love you 3000",end = "")
 print(" ganpati bappa")
+
 x = "sanket legend"
 print(type(x))
 
-import tkinter as tk
+y = 21.9
+print(type(y))
 
-def click():
-    print("Button Clicked!")
+z = 22/6/2011
+print(type(z))
 
-window = tk.Tk()
-window.title("My App")
-window.geometry("400x300")
+k = "sanket legend"
+print(k[0])
 
-button = tk.Button(
-    window,
-    text="Click Me",
-    command=click
-)
+s = "sanket legend"
+print(s[3] ) 
 
-button.pack(pady=50)
+for ex in "mam nandani":
+    print(ex)
 
-window.mainloop()
+K = "Sanket legend"
+print(len(K) ,K.upper() ,K.lower())
+
+S = "Ssanket , legend"
+print(S.replace("s","") )
+print(S.split(','))
+
+n = "sanket"
+l = "legend"
+print( n + " " + l)
+print("SanKet\nLegend")
