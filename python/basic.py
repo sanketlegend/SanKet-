@@ -33,3 +33,48 @@ n = "sanket"
 l = "legend"
 print( n + " " + l)
 print("SanKet\nLegend")
+
+print(bool("SanKet"))
+
+g = "200"
+h = "100"
+
+if g < h:
+    print("Sanket legend is never lose")
+else :
+    print("Sanket ledend never lie")
+
+print(40 + 9)
+print(50 - 1)
+print(7 * 7)
+print(98 /2)
+print(98 // 2)
+print(7 ** 2)
+print(7 % 2)
+
+c = 5
+print(c)
+
+C = 12
+C += 2
+print(C)
+
+h = 16
+h -= 1
+print(h)
+
+f = 13
+f *= 2
+print(f)
+
+j = 26
+j /= 2
+print(j)
+
+g = 32
+g %= 10
+print(g)
+
+n = 7
+n **= 2
+print(n)
