@@ -78,3 +78,17 @@ print(g)
 n = 7
 n **= 2
 print(n)
+
+q = ["sanket","guptaji"]
+d = ["sanket","guptaji"]
+j = q
+print(q is d)
+print(q is j)
+print(d == q)
+print(q is not d)
+
+name = ["sanket legend","guptaji"]
+print("sanket legend" in name)
+print("sanket" in name)
+
+print(len(name))
