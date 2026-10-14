@@ -87,8 +87,13 @@ print(q is j)
 print(d == q)
 print(q is not d)
 
-name = ["sanket legend","guptaji"]
+name = ["sanket legend","guptaji","SANKET","legend"]
 print("sanket legend" in name)
 print("sanket" in name)
-
+print(name[-1])
 print(len(name))
+print(name)
+print(name[1])
+name[3] = "SanKet"
+name.insert(3,"sanKet")
+print(name)
