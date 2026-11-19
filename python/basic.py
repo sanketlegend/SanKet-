@@ -97,3 +97,34 @@ print(name[1])
 name[3] = "SanKet"
 name.insert(3,"sanKet")
 print(name)
+sanket = name.copy()
+print(sanket)
+
+SANKET = {
+    "name": "sanket legend",
+    "D.O.B" : " 22 ""/06 ""/2011",
+    "fav colour":"Red"
+}
+print(SANKET)
+m = SANKET.keys()
+print(m)
+c = SANKET.values()
+print(c)
+q = SANKET.items()
+print(q)
+
+SanKet = "legend"
+match SanKet:
+   case "dam":
+        print("sanket is the only boss")
+   case "soo":
+        print("sanket is the original  ganster")
+   case "legend":
+        print("sanket legend never lose")
+
+modiji = "vote"
+match modiji:
+    case "vibe"|"pm"|"uP":
+        print("vote sab mujhe hi dena")
+    case "note"|"rupees"|"vote" :
+        print("abkih baar 400 paar ")
